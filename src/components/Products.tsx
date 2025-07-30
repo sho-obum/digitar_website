@@ -10,9 +10,7 @@ const Products = () => {
           Ideas turned into <span>Impact</span>
         </p>
         <div className="flex-1">
-          <div className="">
-            
-          </div>
+          <div className=""></div>
           <div className=""></div>
         </div>
       </div>
