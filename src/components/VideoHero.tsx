@@ -165,7 +165,7 @@ export default function VideoHero() {
         >
           <video
             src={DASHBOARD_VIDEO}
-            className="w-full max-w-[1600px] h-auto object-cover"
+            className="w-full max-w-[1200px] h-auto object-cover"
             autoPlay
             muted
             loop

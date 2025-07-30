@@ -11,6 +11,7 @@ import VideoHero from "@/components/VideoHero";
 import Bento from "@/components/Bento";
 import MyCustomGrid from "@/blocks/Components/MagicBento/MyCustomGrid";
 import Products from "@/components/Products";
+import Docks from "@/components/Docks";
 
 export default function Home() {
   return (
@@ -18,15 +19,11 @@ export default function Home() {
       <Navbar />
       <Hero />
       <VideoHero />
-      <Bento />
+  
+      <Products />
       <LogoTicker />
-      {/* <MyCustomGrid /> */}
-      {/* <Products/> */}
-      <Features />
-      <ProductShowcase />
-      <FAQs />
-      <CallToAction />
-      <Footer />
+      
+      <Docks />
     </>
   );
 }
