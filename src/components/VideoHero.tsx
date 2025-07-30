@@ -9,9 +9,9 @@ const DASHBOARD_VIDEO =
   "https://www.start.io/wp-content/uploads/2023/05/STR_Start-io-HP-revamp-Website-with-globe-v2.2.mp4";
 
 const TEXT_BOX_POSITION = {
-  top: -450,     
-  left: 50,    
-  width: 640,    
+  top: -450,
+  left: 50,
+  width: 640,
 };
 
 const REVEAL_TEXT = (
@@ -58,7 +58,7 @@ const REVEAL_TEXT = (
 
     {/* CTA Button */}
     <button className="group relative px-8 py-3 bg-gradient-to-r from-green-600 to-lime-600 rounded-full font-semibold text-white transition-all duration-300 hover:from-green-500 hover:to-lime-500 hover:shadow-lg hover:shadow-green-500/25">
-      <span className="relative z-10">Let's Create Together</span>
+      <span className="relative z-10">Let&apos;s Create Together</span>
       <div className="absolute inset-0 bg-gradient-to-r from-green-400 to-lime-400 rounded-full blur opacity-0 group-hover:opacity-30 transition-opacity duration-300"></div>
     </button>
   </>
@@ -185,7 +185,7 @@ export default function VideoHero() {
           <div
             className="relative p-8 rounded-2xl backdrop-blur-md bg-gradient-to-br from-gray-900/80 via-gray-800/60 to-gray-900/80 border border-gray-700/50 shadow-2xl"
             style={{
-              position: 'absolute',
+              position: "absolute",
               top: TEXT_BOX_POSITION.top,
               left: TEXT_BOX_POSITION.left,
               width: TEXT_BOX_POSITION.width,
