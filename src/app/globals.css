@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-ping, .animate-pulse, .animate-bounce {
+    animation: none;
+  }
+}

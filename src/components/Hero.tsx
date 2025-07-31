@@ -15,7 +15,6 @@ export const Hero = () => {
     offset: ["start end", "end start"],
   });
 
-  
   // Control rocket curve: up 400px, left 250px
   const rocketY = useTransform(scrollYProgress, [0, 1], [0, -400]);
   const rocketX = useTransform(scrollYProgress, [0, 1], [0, -250]);
@@ -119,8 +118,15 @@ export const Hero = () => {
               real-time performance. Partner with us to deliver scalable
               campaigns that convert.
             </p>
-            <button className="bg-white text-black py-3 px-5 rounded-lg font-medium mb-2">
-              Get for free
+            <button
+              className="py-3 font-bold px-4 rounded-lg text-white transition-all duration-300 hover:opacity-90 mb-4"
+              style={{
+                background: "linear-gradient(135deg, #7c3aed, #182fff99)",
+                backgroundPosition: "0 0",
+                backgroundSize: "200% 200%",
+              }}
+            >
+              Get in touch
             </button>
           </div>
         </div>
