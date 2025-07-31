@@ -22,12 +22,12 @@ export const Hero = () => {
   return (
     <div
       ref={heroRef}
-      className="bg-black text-white bg-[linear-gradient(to_bottom,#000,#200D42_34%,#4F21A1_65%,#A46EDB_82%)] py-[120px] relative overflow-hidden"
+      className="bg-black text-white bg-[linear-gradient(to_bottom,#000,#200D42_34%,#4F21A1_65%,#A46EDB_82%)] py-[120px] relative overflow-hidden "
     >
-      <div className="absolute h-[600px] w-[180vw] rounded-[100%] bg-black left-1/2 -translate-x-1/2 border border-[#B48CDE] bg-[radial-gradient(closest-side,#000_82%,#9560eb)] top-[calc(100%-96px)] sm:top-[calc(100%-120px)] z-10"></div>
+      <div className="absolute h-[600px] w-[280vw] sm:w-[180vw] rounded-[100%] bg-black left-1/2 -translate-x-1/2 border border-[#B48CDE] bg-[radial-gradient(closest-side,#000_82%,#9560eb)] top-[calc(100%-85px)] sm:top-[calc(100%-120px)] z-10"></div>
       <div className="container relative">
         <div className="container mx-auto px-4">
-          <div className="flex items-center justify-center mb-8">
+          <div className="flex items-center justify-center mb-8 -mt-20 sm:mt-0">
             <a
               href="#"
               className="border py-1 px-2 rounded-lg border-white/30 inline-flex items-center gap-3"
@@ -44,10 +44,10 @@ export const Hero = () => {
           <div className="flex justify-center">
             <div className="inline-flex relative">
               <div className="flex flex-col text-center z-10">
-                <h1 className="text-5xl md:text-7xl font-bold mb-2 drop-shadow-xl shadow-black">
+                <h1 className="text-4xl md:text-7xl font-bold mb-2 drop-shadow-xl shadow-black">
                   From Ads to Analytics
                 </h1>
-                <h1 className="text-5xl md:text-7xl font-bold mb-6">
+                <h1 className="text-4xl md:text-7xl font-bold mb-6">
                   We Make Every Click Count
                 </h1>
               </div>
@@ -113,7 +113,7 @@ export const Hero = () => {
           </div>
 
           <div className="text-center">
-            <p className="text-lg text-white/70 mb-8 max-w-2xl mx-auto">
+            <p className="text-base text-white/70 mb-8 max-w-2xl mx-auto ">
               Powering next-gen mobile advertising with transparency, reach, and
               real-time performance. Partner with us to deliver scalable
               campaigns that convert.

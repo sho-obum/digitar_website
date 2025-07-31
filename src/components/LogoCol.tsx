@@ -23,9 +23,9 @@ export default function LogoCol(props: {
         initial={{
           y: reverse ? "-50%" : 0,
         }}
-        animate={{ y: reverse ? "50%" : "-50%" }}
+        animate={{ y: reverse ? "0%" : "-50%" }}
         transition={{
-          duration: 18,
+          duration:150,
           repeat: Infinity,
           ease: "linear",
         }}
@@ -36,13 +36,13 @@ export default function LogoCol(props: {
             {integration.map((item) => (
               <div
                 key={`${item.alt}-${i}`}
-                className="bg-[#c48cfa] border border-white/10 rounded-3xl p-6"
+                className="bg-[#ecd7ff] border border-white/10 rounded-3xl p-6"
               >
                 <div className="flex justify-center">
-                  <Image src={item.src} alt={item.alt} className="w-24" />
+                  <Image src={item.src} alt={item.alt} className="w-32" />
                 </div>
-                <h3 className="text-3xl text-center mt-6">{item.alt}</h3>
-                <p className="text-center text-white/50 mt-2">
+                <h3 className="text-2xl font-bold text-center mt-6">{item.alt}</h3>
+                <p className="text-center text-black/50 mt-2">
                   {item.description}
                 </p>
               </div>

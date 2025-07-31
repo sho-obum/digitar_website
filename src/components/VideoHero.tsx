@@ -3,6 +3,7 @@
 import React, { useState, useRef, useEffect, useCallback } from "react";
 import { useInView } from "react-intersection-observer";
 import { motion, useAnimation } from "framer-motion";
+import CountUp from "@/blocks/TextAnimations/CountUp/CountUp";
 
 const THREAD_VIDEO =
   "https://www.start.io/wp-content/uploads/2023/05/STR_2023_Homepage-1300x300_2-1.mp4";
@@ -12,7 +13,8 @@ const DASHBOARD_VIDEO =
 const TEXT_BOX_POSITION = {
   top: -450,
   left: 50,
-  width: 640,
+  width: "calc(50vw - 100px)", // Always maintains 10px right margin
+  maxWidth: "600px", // But never exceeds 600px on large screens
 };
 
 const categoryContent = {
@@ -135,8 +137,8 @@ export function VideoHero() {
         // Reset transition state
         setTimeout(() => {
           setIsTransitioning(false);
-        }, 600);
-      }, 150); // 150ms debounce
+        }, 100);
+      }, 100); // 150ms debounce
     },
     [isScrollingMode, scrollComplete, isTransitioning]
   );
@@ -231,9 +233,22 @@ export function VideoHero() {
       >
         <div className="flex flex-col md:flex-row items-center justify-between gap-12 md:gap-8">
           <div className="text-center flex-1">
-            <div className="text-4xl md:text-7xl font-bold text-[#e7ff30] mb-2">
-              250K+
+            
+              <div className="flex justify-center items-center">
+              <CountUp
+                from={0}
+                to={250}
+                separator=","
+                direction="up"
+                duration={1}
+                className="count-up-text text-4xl md:text-7xl font-bold text-[#e7ff30] mb-2"
+              />
+              <div className="text-4xl md:text-7xl font-bold text-[#e7ff30] mb-2">
+                +
+              </div>
             </div>
+
+
             <div className="text-gray-400 text-sm md:text-base">
               Leads Generated
               {/* <br />
@@ -241,8 +256,21 @@ export function VideoHero() {
             </div>
           </div>
           <div className="text-center flex-1">
-            <div className="text-4xl md:text-7xl font-bold text-[#ff8c12] mb-2">
+            {/* <div className="text-4xl md:text-7xl font-bold text-[#ff8c12] mb-2">
               2.5x
+            </div> */}
+            <div className="flex justify-center items-center">
+              <CountUp
+                from={0.0}
+                to={2.5}
+                separator=","
+                direction="up"
+                duration={1}
+                className="count-up-text text-4xl md:text-7xl font-bold text-[#ff8c12] mb-2"
+              />
+              <div className="text-4xl md:text-7xl font-bold text-[#ff8c12] mb-2">
+                x
+              </div>
             </div>
             <div className="text-gray-400 text-sm md:text-base">
               Return of Ad spend
@@ -251,8 +279,18 @@ export function VideoHero() {
             </div>
           </div>
           <div className="text-center flex-1">
-            <div className="text-4xl md:text-7xl font-bold text-[#27fff8] mb-2">
-              50+
+            <div className="flex justify-center items-center">
+              <CountUp
+                from={0}
+                to={50}
+                separator=","
+                direction="up"
+                duration={1}
+                className="count-up-text text-4xl md:text-7xl font-bold text-[#27fff8] mb-2"
+              />
+              <div className="text-4xl md:text-7xl font-bold text-[#27fff8] mb-2">
+                +
+              </div>
             </div>
             <div className="text-gray-400 text-sm md:text-base">
               Clients
@@ -343,7 +381,7 @@ export function VideoHero() {
                 key={`title-${activeCategory}`}
                 initial={isScrollingMode ? { opacity: 0, y: 20 } : false}
                 animate={isScrollingMode ? { opacity: 1, y: 0 } : false}
-                transition={{ duration: 0.5, delay: 0.2 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
                 className="text-4xl md:text-5xl font-bold mb-3 bg-gradient-to-r from-white via-gray-100 to-gray-300 bg-clip-text text-transparent leading-tight"
               >
                 {currentContent.title}
@@ -354,7 +392,7 @@ export function VideoHero() {
                 key={`description-${activeCategory}`}
                 initial={isScrollingMode ? { opacity: 0, y: 20 } : false}
                 animate={isScrollingMode ? { opacity: 1, y: 0 } : false}
-                transition={{ duration: 0.5, delay: 0.3 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
                 className="text-lg text-gray-300 leading-relaxed mb-8"
               >
                 {currentContent.description}
@@ -365,7 +403,7 @@ export function VideoHero() {
                 key={`metrics-${activeCategory}`}
                 initial={isScrollingMode ? { opacity: 0, y: 20 } : false}
                 animate={isScrollingMode ? { opacity: 1, y: 0 } : false}
-                transition={{ duration: 0.5, delay: 0.4 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
                 className="mb-8"
               >
                 <div className="grid grid-cols-3 gap-6">
@@ -389,18 +427,18 @@ export function VideoHero() {
               </motion.div>
 
               {/* CTA Button */}
-              <motion.button
+              {/* <motion.button
                 key={`cta-${activeCategory}`}
                 initial={isScrollingMode ? { opacity: 0, y: 20 } : false}
                 animate={isScrollingMode ? { opacity: 1, y: 0 } : false}
-                transition={{ duration: 0.5, delay: 0.5 }}
+                transition={{ duration: 0.5, delay: 0.1.5 }}
                 className="group relative px-8 py-3 bg-gradient-to-r from-green-600 to-lime-600 rounded-full font-semibold text-white transition-all duration-300 hover:from-green-500 hover:to-lime-500 hover:shadow-lg hover:shadow-green-500/25"
               >
                 <span className="relative z-10">
                   Let&apos;s Create Together
                 </span>
                 <div className="absolute inset-0 bg-gradient-to-r from-green-400 to-lime-400 rounded-full blur opacity-0 group-hover:opacity-30 transition-opacity duration-300"></div>
-              </motion.button>
+              </motion.button> */}
 
               {/* Decorative Elements */}
             </div>
