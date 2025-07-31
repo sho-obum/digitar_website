@@ -44,7 +44,7 @@ export type LogoType = typeof images;
 
 export const LogoTicker = () => {
   return (
-    <div className="py-24 overflow-hidden bg-black contia">
+    <div className="py-24 overflow-hidden bg-gradient-to-b from-[#12002f] to-[#090213]">
       <div className="container mx-auto px-24">
         <div className="grid lg:grid-cols-2 items-center lg:gap-16">
           <div className="">

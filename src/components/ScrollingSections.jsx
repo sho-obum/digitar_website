@@ -179,7 +179,7 @@ export function ScrollingSections() {
               </motion.div>
 
               {/* Service Badges */}
-              <motion.div 
+              {/* <motion.div 
                 key={`services-${activeCategory}`}
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -197,7 +197,9 @@ export function ScrollingSections() {
                     🔹 {service}
                   </motion.span>
                 ))}
-              </motion.div>
+              </motion.div> */}
+
+              
 
               {/* CTA Button */}
               <motion.button 

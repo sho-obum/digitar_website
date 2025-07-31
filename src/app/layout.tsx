@@ -7,8 +7,9 @@ import "./globals.css";
 const dmSans = DM_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Adxity - Advanced Digital Marketing Solutions",
-  description: "Transform your digital advertising with Adxity's cutting-edge programmatic solutions, AI-powered audience targeting, and comprehensive analytics.",
+  title: "Digitar Media | 360° Marketing & Performance Growth Agency",
+  description:
+    "From strategy to execution — Digitar Media delivers full-funnel 360° marketing solutions. Performance-driven. ROI-focused. Trusted by global brands to scale across digital platforms.",
 };
 
 export default function RootLayout({
@@ -21,9 +22,7 @@ export default function RootLayout({
       <head>
         <link href="https://path-to-ibrand-font.com/css" rel="stylesheet" />
       </head>
-      <body className={clsx(dmSans.className, "antialiased")}>
-        {children}
-      </body>
+      <body className={clsx(dmSans.className, "antialiased")}>{children}</body>
     </html>
   );
 }
