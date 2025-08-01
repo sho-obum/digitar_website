@@ -10,21 +10,18 @@ export const CallToAction = () => {
       <div className="container max-w-5xl mx-auto">
         {/* Mobile Layout: Email First, Logo Second, Addresses Third */}
         <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 lg:gap-16">
-          
           {/* Email Section - First on Mobile, Right on Desktop */}
           <div className="order-1 lg:order-2 text-center lg:text-left">
             <div className="max-w-md mx-auto lg:mx-0">
               <h2 className="font-bold text-3xl sm:text-4xl lg:text-5xl tracking-tighter mb-6 text-white">
-                Stay Ahead of the 
-                <span className="text-orange-400"> 
-                  {" "}Digital Curve 
-                </span>
+                Stay Ahead of the
+                <span className="text-orange-400"> Digital Curve</span>
               </h2>
 
               <p className="text-base lg:text-lg text-gray-300 leading-relaxed mb-8">
-                Get exclusive marketing insights, industry trends, and growth
-                strategies delivered straight to your inbox. Join 10,000+
-                marketers who trust our expertise.
+                Stay updated with the latest campaign, platform updates, and
+                high-converting campaigns. Join 2000+ advertisers and publishers
+                leveraging our expertise to scale faster.
               </p>
             </div>
 
@@ -49,16 +46,15 @@ export const CallToAction = () => {
 
           {/* Logo and Addresses - Second/Third on Mobile, Left on Desktop */}
           <div className="order-2 lg:order-1 space-y-8">
-            
             {/* Logo Section - Second on Mobile */}
             <div className="text-center lg:text-left">
               <div className="flex flex-col sm:flex-row gap-2 justify-center lg:justify-start items-center">
                 <Image src={logo} alt="logo" className="h-10 w-auto" />
                 <div className="text-center lg:text-left">
-                  <h3 className="text-2xl sm:text-3xl font-bold text-white">Digitar Media</h3>
-                  <p className="text-gray-400 text-sm -mt-1">
-                    Digitally Born
-                  </p>
+                  <h3 className="text-2xl sm:text-3xl font-bold text-white">
+                    Digitar Media
+                  </h3>
+                  <p className="text-gray-400 text-sm -mt-1">Digitally Born</p>
                 </div>
               </div>
             </div>
@@ -77,7 +73,7 @@ export const CallToAction = () => {
                   <br />
                   <span className="text-white">info@digitarmedia.com</span>
                   <br />
-                  +91 80 4718-9000
+                  +91 9811 457 480
                 </p>
               </div>
 
@@ -91,10 +87,9 @@ export const CallToAction = () => {
                   <br />
                   Sheridan Wyoming 82801, USA
                   <br />
-               
                   <span className="text-white">media@digitarmedia.com</span>
                   <br />
-                  +1 (555) 247-8900
+                  +1 763 260 5221
                 </p>
               </div>
             </div>
@@ -105,7 +100,7 @@ export const CallToAction = () => {
         <div className="mt-4">
           {/* Horizontal Rule */}
           <hr className="border-white/20 mb-6 sm:mt-12" />
-          
+
           {/* Copyright Section */}
           <div className="text-center text-gray-400 text-sm mb-12 sm:mb-0">
             <p>© 2025 Digitar Media. All rights reserved.</p>

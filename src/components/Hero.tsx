@@ -74,6 +74,7 @@ export const Hero = () => {
                 <Image
                   src={cursorImage}
                   alt="cursor"
+                  className=""
                   height={400}
                   width={400}
                   style={{

@@ -2,6 +2,10 @@
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import logo from "../../src/assets/images/Digitar_Media_logo_White_Hexagon.png";
+import adxityLogo from "../../src/assets/images/logosaas.png";
+import adpocketLogo from "../../src/assets/images/Adpocket.png";
+import career from "../../src/assets/images/briefcase.png";
+import call from "../../src/assets/images/operator.png";
 
 export const NewNav = () => {
   const [isVisible, setIsVisible] = useState(true);
@@ -91,104 +95,63 @@ export const NewNav = () => {
         </div>
       </nav>
 
-      {/* Mobile Dock - Simple phone-style */}
+      {/* Mobile Dock - iOS Island Style */}
+      {/* Mobile Dock - Corner to Corner iOS Style */}
       <nav className="md:hidden fixed bottom-0 left-0 right-0 z-50">
-        <div className="bg-gray-900/95 border-t border-purple-800/30">
-          <div className="flex items-center justify-around px-4 py-3 max-w-sm mx-auto">
-            {/* Services */}
-            <a
-              href="#services"
-              className="flex flex-col items-center p-2 rounded-lg hover:bg-purple-800/20 transition-colors duration-200"
-            >
-              <svg
-                className="w-6 h-6 text-gray-300"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
-                />
-              </svg>
-              <span className="text-xs text-gray-400 mt-1">Services</span>
+        <div className="bg-black/70 backdrop-blur-xl rounded-t-3xl border-t border-white/10 shadow-2xl px-6 py-4">
+          <div className="flex items-end justify-around max-w-full">
+            {/* Career */}
+            <a href="#services" className="flex flex-col items-center group">
+              <div className="p-3 rounded-xl hover:bg-white/10 active:bg-white/20 transition-all duration-200 hover:scale-110">
+                <Image src={career} alt="Career" className="w-6 h-6" />
+              </div>
+              <span className="text-[10px] font-medium text-gray-300 mt-1 tracking-wide opacity-80">
+                Career
+              </span>
             </a>
 
-            {/* About */}
-            <a
-              href="#about"
-              className="flex flex-col items-center p-2 rounded-lg hover:bg-purple-800/20 transition-colors duration-200"
-            >
-              <svg
-                className="w-6 h-6 text-gray-300"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                />
-              </svg>
-              <span className="text-xs text-gray-400 mt-1">About</span>
+            {/* Adpocket */}
+            <a href="#about" className="flex flex-col items-center group">
+              <div className="p-3 rounded-xl hover:bg-white/10 active:bg-white/20 transition-all duration-200 hover:scale-110">
+                <Image src={adpocketLogo} alt="Adpocket" className="w-6 h-6" />
+              </div>
+              <span className="text-[10px] font-medium text-gray-300 mt-1 tracking-wide opacity-80">
+                Adpocket
+              </span>
             </a>
 
-            {/* Logo - Center */}
-            <div className="flex flex-col items-center p-2">
-              <div className="w-8 h-8 flex items-center justify-center">
+            {/* Center Logo - Prominent but not elevated */}
+            <div className="flex flex-col items-center">
+              <div className="w-14 h-14 bg-gradient-to-br from-purple-600 via-purple-500 to-blue-600 rounded-2xl flex items-center justify-center shadow-xl border-2 border-white/20 hover:scale-105 active:scale-95 transition-all duration-200">
                 <Image
                   src={logo}
-                  alt="Logo"
-                  className="w-7 h-7 object-contain"
+                  alt="Home"
+                  className="w-9 h-9 object-contain"
                 />
               </div>
-              <span className="text-xs text-gray-400 mt-1">Home</span>
+              <span className="text-[10px] font-medium text-white mt-1 tracking-wide">
+                Home
+              </span>
             </div>
 
-            {/* Blog */}
-            <a
-              href="#blog"
-              className="flex flex-col items-center p-2 rounded-lg hover:bg-purple-800/20 transition-colors duration-200"
-            >
-              <svg
-                className="w-6 h-6 text-gray-300"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"
-                />
-              </svg>
-              <span className="text-xs text-gray-400 mt-1">Blog</span>
+            {/* Adxity */}
+            <a href="#blog" className="flex flex-col items-center group">
+              <div className="p-3 rounded-xl hover:bg-white/10 active:bg-white/20 transition-all duration-200 hover:scale-110">
+                <Image src={adxityLogo} alt="Adxity" className="w-6 h-6" />
+              </div>
+              <span className="text-[10px] font-medium text-gray-300 mt-1 tracking-wide opacity-80">
+                Adxity
+              </span>
             </a>
 
             {/* Contact */}
-            <a
-              href="#contact"
-              className="flex flex-col items-center p-2 rounded-lg hover:bg-purple-800/20 transition-colors duration-200"
-            >
-              <svg
-                className="w-6 h-6 text-gray-300"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                />
-              </svg>
-              <span className="text-xs text-gray-400 mt-1">Contact</span>
+            <a href="#contact" className="flex flex-col items-center group">
+              <div className="p-3 rounded-xl hover:bg-white/10 active:bg-white/20 transition-all duration-200 hover:scale-110">
+                <Image src={call} alt="Contact" className="w-6 h-6" />
+              </div>
+              <span className="text-[10px] font-medium text-gray-300 mt-1 tracking-wide opacity-80">
+                Contact
+              </span>
             </a>
           </div>
         </div>
