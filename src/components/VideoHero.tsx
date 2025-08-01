@@ -233,8 +233,7 @@ export function VideoHero() {
       >
         <div className="flex flex-col md:flex-row items-center justify-between gap-12 md:gap-8">
           <div className="text-center flex-1">
-            
-              <div className="flex justify-center items-center">
+            <div className="flex justify-center items-center">
               <CountUp
                 from={0}
                 to={250}
@@ -244,10 +243,9 @@ export function VideoHero() {
                 className="count-up-text text-4xl md:text-7xl font-bold text-[#e7ff30] mb-2"
               />
               <div className="text-4xl md:text-7xl font-bold text-[#e7ff30] mb-2">
-                +
+                K+
               </div>
             </div>
-
 
             <div className="text-gray-400 text-sm md:text-base">
               Leads Generated
@@ -303,12 +301,11 @@ export function VideoHero() {
       {/* Thread Video */}
       <div className="flex items-center justify-center mb-8">
         <video
-          className="w-[1200px] md:w-[800px] lg:w-[1200px] h-80 object-cover"
+          className="relative bottom-[80px] md:bottom-[120px] lg:bottom-[160px] w-[800px] md:w-[1200px] h-80 object-cover"
           autoPlay
           muted
           loop
           playsInline
-          style={{ position: "relative", bottom: "160px" }}
         >
           <source src={THREAD_VIDEO} type="video/mp4" />
           Your browser does not support the video tag.
