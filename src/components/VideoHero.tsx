@@ -87,10 +87,8 @@ export function VideoHero() {
   const [isTransitioning, setIsTransitioning] = useState(false);
 
   const componentRef = useRef<HTMLDivElement | null>(null);
-
   const wheelTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  // Debounced wheel handler
   // Debounced wheel handler
   const handleWheel = useCallback(
     (event: WheelEvent) => {
@@ -138,7 +136,7 @@ export function VideoHero() {
         setTimeout(() => {
           setIsTransitioning(false);
         }, 100);
-      }, 100); // 150ms debounce
+      }, 100); // 100ms debounce
     },
     [isScrollingMode, scrollComplete, isTransitioning]
   );
@@ -156,7 +154,6 @@ export function VideoHero() {
   }, [isScrollingMode, scrollComplete, handleWheel]);
 
   // Hide/show content below
-  // Hide/show content below
   useEffect(() => {
     const videoHeroParent =
       document.querySelector("[data-video-hero]")?.parentElement;
@@ -168,7 +165,6 @@ export function VideoHero() {
 
       allSiblings.slice(videoHeroIndex + 1).forEach((sibling) => {
         if (sibling instanceof HTMLElement) {
-          // ✅ Type guard
           if (isScrollingMode && !scrollComplete) {
             sibling.style.display = "none";
           } else {
@@ -228,7 +224,7 @@ export function VideoHero() {
     >
       {/* Metrics */}
       <div
-        className="container mx-auto max-w-6xl relative z-10 mb-10"
+        className="container mx-auto max-w-6xl relative z-50 mb-10"
         ref={textContainerRef}
       >
         <div className="flex flex-col md:flex-row items-center justify-between gap-12 md:gap-8">
@@ -249,14 +245,9 @@ export function VideoHero() {
 
             <div className="text-gray-400 text-sm md:text-base">
               Leads Generated
-              {/* <br />
-              (Return on Ad Spend) */}
             </div>
           </div>
           <div className="text-center flex-1">
-            {/* <div className="text-4xl md:text-7xl font-bold text-[#ff8c12] mb-2">
-              2.5x
-            </div> */}
             <div className="flex justify-center items-center">
               <CountUp
                 from={0.0}
@@ -299,13 +290,16 @@ export function VideoHero() {
       </div>
 
       {/* Thread Video */}
-      <div className="flex items-center justify-center mb-8">
+      <div className="flex items-center justify-center mb-8 relative -z-10">
         <video
-          className="relative bottom-[80px] md:bottom-[120px] lg:bottom-[160px] w-[800px] md:w-[1200px] h-80 object-cover"
+          className="relative bottom-[40px] md:bottom-[120px] lg:bottom-[160px] w-[800px] md:w-[1200px] h-80 object-cover"
           autoPlay
           muted
           loop
           playsInline
+          style={{
+            zIndex: -1,
+          }}
         >
           <source src={THREAD_VIDEO} type="video/mp4" />
           Your browser does not support the video tag.
@@ -403,9 +397,9 @@ export function VideoHero() {
                 transition={{ duration: 0.5, delay: 0.1 }}
                 className="mb-8"
               >
-                <div className="grid grid-cols-3 gap-6">
+                <div className="grid grid-cols-3 gap-6 ">
                   {currentContent.metrics.map((metric, index) => (
-                    <div key={index} className="text-center">
+                    <div key={index} className="text-center relative z-10">
                       <div
                         className={`text-2xl md:text-3xl font-bold mb-1 ${
                           index === 0
@@ -422,22 +416,6 @@ export function VideoHero() {
                   ))}
                 </div>
               </motion.div>
-
-              {/* CTA Button */}
-              {/* <motion.button
-                key={`cta-${activeCategory}`}
-                initial={isScrollingMode ? { opacity: 0, y: 20 } : false}
-                animate={isScrollingMode ? { opacity: 1, y: 0 } : false}
-                transition={{ duration: 0.5, delay: 0.1.5 }}
-                className="group relative px-8 py-3 bg-gradient-to-r from-green-600 to-lime-600 rounded-full font-semibold text-white transition-all duration-300 hover:from-green-500 hover:to-lime-500 hover:shadow-lg hover:shadow-green-500/25"
-              >
-                <span className="relative z-10">
-                  Let&apos;s Create Together
-                </span>
-                <div className="absolute inset-0 bg-gradient-to-r from-green-400 to-lime-400 rounded-full blur opacity-0 group-hover:opacity-30 transition-opacity duration-300"></div>
-              </motion.button> */}
-
-              {/* Decorative Elements */}
             </div>
           </div>
         </motion.div>
@@ -445,7 +423,7 @@ export function VideoHero() {
 
       {isScrollingMode && !scrollComplete && (
         <>
-          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-center text-gray-400 flex justify-center items-center flex-col r">
+          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-center text-gray-400 flex justify-center items-center flex-col">
             <div className="text-sm mb-2">Scroll to explore services</div>
             <div className="w-6 h-10 border border-gray-400 rounded-full flex justify-center">
               <div className="w-1 h-3 bg-gray-400 rounded-full mt-2 animate-bounce"></div>

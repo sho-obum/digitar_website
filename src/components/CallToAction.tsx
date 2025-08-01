@@ -75,7 +75,7 @@ export const CallToAction = () => {
                   <br />
                   Ramesh Nagar, Delhi-110015 India
                   <br />
-                  <span className="text-white">india@digitarmedia.com</span>
+                  <span className="text-white">info@digitarmedia.com</span>
                   <br />
                   +91 80 4718-9000
                 </p>
@@ -92,7 +92,7 @@ export const CallToAction = () => {
                   Sheridan Wyoming 82801, USA
                   <br />
                
-                  <span className="text-white">usa@digitarmedia.com</span>
+                  <span className="text-white">media@digitarmedia.com</span>
                   <br />
                   +1 (555) 247-8900
                 </p>
